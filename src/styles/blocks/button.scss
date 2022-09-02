@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2060f6;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: rotateX(15deg);
+    box-shadow: 0 15px 15px #2c2c2c;
+    outline: none;
+  }
+
+  @include exceptMob {
+    width: 264px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 121px;
+  }
+}

@@ -1,0 +1,258 @@
+.footer {
+  background-color: #2c2c2c;
+  border-radius: 30px 30px 0 0;
+  max-width: 2000px;
+}
+
+.form-field {
+  display: block;
+  margin-bottom: 40px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: #fff;
+
+  @include onDesktop {
+    margin-bottom: 48px;
+  }
+
+  &--last {
+    margin-bottom: 56px;
+    height: 22px;
+    resize: none;
+
+    @include onTablet {
+      margin-bottom: 90px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 90px;
+    }
+  }
+}
+
+.send {
+  &__title {
+    padding: 72px 0 48px;
+    margin: 0;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    display: flex;
+    align-items: center;
+
+    @include onDesktop {
+      padding: 180px 0 56px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 0 0 16px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+
+    &::placeholder {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+      color: #fff;
+      opacity: 0.7;
+    }
+
+    &:hover {
+      border-bottom: 2px solid #144ed4;
+    }
+  }
+
+  &__button {
+    margin-bottom: 80px;
+
+    @include onDesktop {
+      margin-bottom: 125px;
+    }
+
+    @include onLarge {
+      margin-bottom: 125px;
+    }
+
+    &:hover {
+      transform: rotateX(15deg);
+      box-shadow: 0 15px 15px #fff;
+      outline: none;
+    }
+  }
+}
+
+.contact {
+  &__title {
+    padding: 72px 0 48px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+
+    @include onDesktop {
+      padding: 180px 0 56px;
+    }
+  }
+
+  &__info {
+    box-sizing: border-box;
+    margin-bottom: 48px;
+  }
+
+  &__info-title {
+    padding-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  &__info-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #2060f6;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.footer-menu {
+  padding: 0 0 80px;
+  margin: 0;
+  background-color: #2c2c2c;
+
+  &__image {
+    margin-bottom: 50px;
+
+    @include onDesktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    height: max-content;
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 50px 0 0;
+    list-style: none;
+
+    @include onTablet {
+      display: flex;
+      align-content: center;
+      padding: 0;
+    }
+
+    @include onDesktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      transform: translateY(25%);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: Poppins, sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: left;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: #2060f6;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+  }
+
+  &__item {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include onTablet {
+      margin: 0 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    @include onDesktop {
+      margin: 0 32px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
